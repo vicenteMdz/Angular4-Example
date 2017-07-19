@@ -1,0 +1,32 @@
+<div class="container-fluid">	
+	<div class="row">
+		<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">			
+		</div>
+		<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+			<h1>Add Post</h1>
+			<form (ngSubmit)="submitComment()">
+            <div class="form-group">
+                <div class="input-group">
+                	<span class="input-group-addon" id="basic-addon1">Id</span>
+                    <input type="text" class="form-control" readonly="readonly" [(ngModel)]="model.id" name="id">
+                </div><br />
+                <div class="input-group">
+                	<span class="input-group-addon" id="basic-addon1">Title</span>
+                    <input type="text" class="form-control" [(ngModel)]="model.title" name="title" placeholder="Insert the title of your post">
+                </div><br />
+                <div class="input-group">
+                	<span class="input-group-addon" id="basic-addon1">Body</span>
+                	<textarea class="form-control" rows="3" placeholder="Insert the content of your post" [(ngModel)]="model.body" name="body"></textarea>
+                </div><br />
+                <div class="input-group">
+                    <span class="input-group-addon" id="basic-addon1"><span class="glyphicon glyphicon-user"></span></span>
+                    <input type="text" class="form-control" placeholder="Author" [(ngModel)]="model.author" name="author">
+                </div><br />
+                <button type="submit" class="btn btn-primary btn-block">Add</button>
+            </div>
+        </form>
+		</div>
+		<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">			
+		</div>
+	</div>
+</div>
